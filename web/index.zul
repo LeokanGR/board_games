@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul https://www.zkoss.org/2005/zul/zul.xsd">
+    <borderlayout apply="gov.ypaat.anfe.ui.MainUI" >
+        <north  border="none">
+            <div>
+                <div>
+                    <hbox sclass="title" height="24px" align="center" pack="center" hflex="1">
+                        <cell hflex="1" align="center">
+                            <label value="${labels.APPLICATION_TITLE}" sclass="title"/>
+                        </cell>           
+                        <cell width="30px">
+                            <label id="versionLbl" sclass="build"/>  
+                        </cell>
+                    </hbox>
+                </div>
+                <separator/>
+                <menubar id="menubar">
+                    <menuitem id="mnuExcelReport"
+                              label="${labels.EXCEL_REPORT}" 
+                              image="~./img/statistics_16.png" />
+                    <menu id="mnuParameter" label="${labels.PARAMETER}" image="~./img/gear_16.png">
+                        <menupopup>
+                            <menuitem id="mnuArmQueryList"
+                                      label="${labels.ArmQuery.listTitle}" 
+                                      image="~./img/statistics_16.png"/>
+                            <menuitem id="mnuUserAppList"
+                                      label="${labels.UserApp.listTitle}" 
+                                      image="~./img/address_16.png" /> 
+                        </menupopup>
+                    </menu>
+                    <menu label="${labels.HELP}" image="~./img/help_16.png">
+                        <menupopup>
+                            <menuitem id="mnuUserManual" 
+                                      label="${labels.USER_MANUAL}" image="~./img/pdf-icon.png"
+                                      href="/help/manual.pdf" target="_blank"/>
+                            <menuitem id="mnuAbout" label="${labels.ABOUT}" image="~./img/info_16.png"/>
+                            <menu label="${labels.LANGUAGE}" image="~./img/globe_16.png">
+                                <menupopup>
+                                    <menuitem id="mnuEnglish" label="${labels.ENGLISH}" image="~./img/flags/ac_16.png"/>
+                                    <menuitem id="mnuGreek" label="${labels.GREEK}" image="~./img/flags/gr_16.png"/>
+                                </menupopup>
+                            </menu>
+                            <menuitem id="mnuLogout" label="${labels.LOGOUT}" image="~./img/logout_16.png"/>
+                        </menupopup>
+                    </menu>
+                </menubar>
+                <separator/>
+            </div>
+        </north>
+        <center border="none" autoscroll="true" sclass="backimg">
+            <include id="mainContent"/>
+        </center>       
+        <south sclass="footer" >
+            <label id="userLbl" sclass="footer"/>  
+        </south>
+    </borderlayout>
+</zk>
+

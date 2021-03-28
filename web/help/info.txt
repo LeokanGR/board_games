@@ -1,0 +1,1 @@
+place manual.pdf in this folder
