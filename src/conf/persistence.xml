@@ -32,7 +32,7 @@
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <shared-cache-mode>NONE</shared-cache-mode>
     <properties>
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="eclipselink.target-database" value="MySQL4"/>
     </properties>
   </persistence-unit>
 </persistence>
