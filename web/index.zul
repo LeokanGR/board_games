@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
-<zk xmlns="http://www.zkoss.org/2005/zul"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.zkoss.org/2005/zul https://www.zkoss.org/2005/zul/zul.xsd">
-    <borderlayout apply="gov.ypaat.anfe.ui.MainUI" >
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <borderlayout apply="gov.ypaat.sampleapp.ui.MainUI" >
         <north  border="none">
             <div>
                 <div>
