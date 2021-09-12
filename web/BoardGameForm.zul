@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window apply="gov.ypaat.experimentsInZK.ui.PlayerFormUI" 
+        closable="true" hflex="min" title="Scrabble" mode="overlapped"
+        xmlns="http://www.zkoss.org/2005/zul" left="120px" top="100px">
+    <caption label="Εισαγωγή νέου επιτραπέζιου παιχνιδιού" iconSclass="z-icon-fw fas fa-chess" />
+    <grid hflex="min">
+        <columns>
+            <column hflex="min"/>
+            <column hflex="min"/>
+        </columns>
+        <rows>
+            <row>
+                <label value="Ονομασία : " />
+                <textbox id="nameTxt" maxlength="50" constraint="no empty, /[α-ωΑ-Ωa-zA-Z]/i:Επιτρεπόμενοι χαρακτήρες είναι τα γράμματα του Ελληνικού και λατινικού αλφάβητου" />
+            </row>
+            <row>
+                <label value="Περιγραφή : " />
+                <textbox id="descriptionTxt" maxlength="255" />
+            </row>
+            <row>
+                <label value="Ελάχιστος αριθμός παιχτών : " />
+                <intbox id="minPlayersIntTxt" maxlength="1" constraint="no empty, no zero:Επιτρεπόμενοι αριθμοί [1-9]" />
+            </row>
+            <row>
+                <label value="Μέγιστος αριθμός παιχτών : " />
+                <intbox id="maxPlayersIntTxt" maxlength="3" constraint="no empty, no zero:Επιτρεπόμενοι αριθμοί [1-999]" />
+            </row>
+            <row>
+                <label value="Το παιχνίδι παίζεται σε γύρους : " />
+                <checkbox id="playingInRoundsChk" />
+            </row>
+            <row spans="2">
+                <cell align="right">
+                    <button id="saveBtn" label="Αποθήκευση" iconSclass="z-icon-fw fas fa-save" sclass="btn btn-outline-primary me-3" />
+                    <button id="cancelBtn" label="Ακύρωση" iconSclass="z-icon-fw fas fa-times-circle" sclass="btn btn-outline-danger" />
+                </cell>
+            </row>
+        </rows>
+    </grid>
+</window>
